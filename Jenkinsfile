@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clonar repositorio') {
             steps {
-                git url: 'https://github.com/ashleyprz/jenkins-prueba.git', branch: 'main', credentialsId: 'github-token'
+                git url: 'https://github.com/ashleyprz/jenkins-prueba.git', branch: "${env.BRANCH_NAME}", credentialsId: 'github-token'
             }
         }
         stage('Instalar dependencias') {

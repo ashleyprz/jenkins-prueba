@@ -6,6 +6,11 @@ pipeline {
         }
     }
     stages {
+        stage('Limpiar workspace') {
+            steps {
+                cleanWs()
+            }
+        }
         stage('Clonar repositorio') {
             steps {
                 git url: 'https://github.com/ashleyprz/jenkins-prueba.git', branch: "${env.BRANCH_NAME}", credentialsId: 'github-token'

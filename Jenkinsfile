@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Ejecutar pruebas') {
             steps {
-                sh 'pytest || echo "No se encontraron tests"' 
+                sh 'pytest"' 
             }
         }
     }
